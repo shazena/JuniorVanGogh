@@ -8,6 +8,14 @@ function Button(i) {
   this.show = function() {
     noStroke();
     rect(this.x, this.y, this.width, this.height);
+
     text(this.text[i], this.x, this.y) //uses the index number of the button to select the text for the button from the array above.
   };
+  this.selector = function() {
+      if ((mouseY < buttons[i].y + (buttons[i].height / 2)) && (mouseY > buttons[i].y - (buttons[i].height / 2))) {  
+        if ((mouseX < buttons[i].x + (buttons[i].width / 2)) && (mouseX > buttons[i].x - (buttons[i].width / 2))) { 
+          whichButton = i; 
+        }
+      }
 } 
+}

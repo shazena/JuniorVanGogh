@@ -2,6 +2,8 @@ function treeBrush() {
   g2.noStroke();
   g2.fill(random(30, 40), 100, 40);
   for(let i = 0; i < 20; i+=2){
+    g2.stroke(35, 66, 58);
+    g2.strokeWeight(1);
     g2.ellipse(mouseX + (1.3) * i, mouseY + 2 * i, 2, 3)
   }
 }
